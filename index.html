@@ -256,6 +256,21 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
 .faq details p{padding:0 48px 28px 0;color:var(--suave)}
 @media(max-width:900px){.perguntas .wrap{grid-template-columns:1fr;gap:40px}.faq summary{font-size:21px}}
 
+/* time */
+.time{background:var(--fundo)}
+.pessoas{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pessoa{margin:0}
+.pessoa .foto{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--v100)}
+.pessoa img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:saturate(.85);transition:transform 1.2s var(--ease),filter .6s}
+.pessoa .foto::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(11,57,46,.08);background:linear-gradient(180deg,transparent 60%,rgba(1,28,21,.18))}
+.pessoa:hover img{transform:scale(1.04);filter:saturate(1)}
+.pessoa figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:20px 4px 0}
+.pessoa b{font:500 26px/1.15 var(--titulo);color:var(--esmeralda)}
+.pessoa a{font-size:13px;color:var(--v700);text-decoration:none;letter-spacing:.02em}
+.pessoa a:hover{color:var(--esmeralda);text-decoration:underline}
+@media(max-width:900px){.pessoas{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pessoas{grid-template-columns:1fr;max-width:340px;margin:0 auto}}
+
 /* chamada final */
 .final{background:radial-gradient(900px 500px at 50% 0%,rgba(20,92,72,.9),transparent 70%),var(--noite);color:var(--marfim);text-align:center;padding:150px 0}
 .final .simbolo{width:46px;height:56px;margin:0 auto 34px}
@@ -587,7 +602,22 @@ footer .wrap{border-top:1px solid rgba(168,224,196,.12);padding-top:56px}
   </div>
 </section>
 
-<!-- 09 · conversão -->
+<!-- 09 · time -->
+<section class="time" id="time" aria-labelledby="titulo-time">
+  <div class="wrap">
+    <div class="cab centro">
+      <span class="rotulo rv">Quem faz o Prumo</span>
+      <h2 id="titulo-time" class="rv" style="--d:.08s">As pessoas por trás<br><em>do seu rumo.</em></h2>
+    </div>
+    <div class="pessoas">
+      <figure class="pessoa rv" style="--d:0.00s"><div class="foto"><img src="assets/time/guilherme-geronymo.jpg" alt="Foto de Guilherme Geronymo" width="640" height="640" loading="lazy" decoding="async"></div><figcaption><b>Guilherme Geronymo</b><a href="https://github.com/Geronymow" rel="noopener">@Geronymow</a></figcaption></figure>
+      <figure class="pessoa rv" style="--d:0.08s"><div class="foto"><img src="assets/time/eduardo-sannini.jpg" alt="Foto de Eduardo Sannini" width="640" height="640" loading="lazy" decoding="async"></div><figcaption><b>Eduardo Sannini</b><a href="https://github.com/Eduardokhayyam" rel="noopener">@Eduardokhayyam</a></figcaption></figure>
+      <figure class="pessoa rv" style="--d:0.16s"><div class="foto"><img src="assets/time/gabriel-ramos.jpg" alt="Foto de Gabriel Ramos" width="640" height="640" loading="lazy" decoding="async"></div><figcaption><b>Gabriel Ramos</b><a href="https://github.com/gaferamos" rel="noopener">@gaferamos</a></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · conversão -->
 <section class="final" id="acesso" aria-labelledby="titulo-final">
   <div class="wrap">
     <svg class="simbolo rv" aria-hidden="true"><use href="#simbolo"/></svg>
